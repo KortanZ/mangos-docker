@@ -1,4 +1,4 @@
-FROM rikorose/gcc-cmake:7 as builder
+FROM rikorose/gcc-cmake:gcc-7 as builder
 ARG MANGOS_SERVER_VERSION=master
 ARG THREAD_COUNT="-j4"
 
