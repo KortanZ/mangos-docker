@@ -6,7 +6,7 @@ RUN apt-get update -qq && \
     apt-get install openssl libssl-dev -y && \
     git clone https://github.com/mangosone/server.git -b ${MANGOS_SERVER_VERSION} --recursive && \
     cd server && \
-    cmake . -DBUILD_MANGOSD=No -DBUILD_TOOLS=No -DCONF_DIR=conf/ && \
+    cmake . -DBUILD_MANGOSD=No -DBUILD_TOOLS=No -DCONF_INSTALL_DIR=conf/ && \
     make ${THREAD_COUNT} && \
     make install ${THREAD_COUNT}
 
