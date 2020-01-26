@@ -15,7 +15,7 @@ MAINTAINER Stephen SORRIAUX <stephen.sorriaux@gmail.com>
 EXPOSE 3724
 ENV LOGIN_DATABASE_INFO=127.0.0.1;3306;root;mangos;realmd
 WORKDIR /etc/mangos/
-COPY --from=builder /server/install/* .
+COPY --from=builder /server/install/* ./
 RUN apt-get update && \
     apt-get install wget libmariadbclient-dev libmariadbd19 libmariadb3 libssl-dev -y && \
     ln -s /usr/lib/x86_64-linux-gnu/libmariadbclient.so /usr/lib/x86_64-linux-gnu/libmariadbclient.so.18 && \
